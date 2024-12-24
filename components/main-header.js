@@ -4,25 +4,29 @@ import Image from "next/image"
 import logoImg from "@/assets/logo.png"
 
 import classes from "./main-header.module.css"
+import MainHeaderBackground from "./main-header-background";
 
 export default function MainHeader() {
-  return <header className={classes.header}>
-    <Link className={classes.logo} href="/">
-      {/* Note: we use priority so image is loadest soonest (not lazy-loaded) */}
-      <Image src={logoImg} alt="A plate with food on it" priority />
-      NextLevel Food
-    </Link>
+  return (<>
+    <MainHeaderBackground />
+    <header className={classes.header}>
+      <Link className={classes.logo} href="/">
+        {/* Note: we use priority so image is loadest soonest (not lazy-loaded) */}
+        <Image src={logoImg} alt="A plate with food on it" priority />
+        NextLevel Food
+      </Link>
 
-    <nav className={classes.nav}>
-      <ul>
-        <li>
-          <Link href="/meals">Browse Meals</Link>
-        </li>
-        <li>
-          <Link href="/community">Foodies Community</Link>
-        </li>
-      </ul>
-    </nav>
+      <nav className={classes.nav}>
+        <ul>
+          <li>
+            <Link href="/meals">Browse Meals</Link>
+          </li>
+          <li>
+            <Link href="/community">Foodies Community</Link>
+          </li>
+        </ul>
+      </nav>
 
-  </header>
+    </header>
+  </>);
 }
