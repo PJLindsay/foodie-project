@@ -36,3 +36,5 @@ next-env.d.ts
 .yarn
 .pnp.*
 .prettierrc.*
+
+meals.db
