@@ -10,3 +10,9 @@ To initialize sqlite database (meals.db) use the following command:
 ```
 node initdb.js
 ```
+
+create/run production image
+```
+npm build
+npm run start
+```
